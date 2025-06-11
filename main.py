@@ -74,7 +74,7 @@ def main(page: ft.Page):
 
     # holds character names
     character_text = ft.Text(
-        f"\n" * 20,
+        f"",
         size=32,
         font_family="cool_font",
     )
@@ -82,11 +82,12 @@ def main(page: ft.Page):
     character_container = ft.Column([
         ft.Container(
             character_text,
-            border_radius=7,
+            border_radius=10,
             gradient=ft.LinearGradient(
                 colors=[ft.Colors.BLUE_400, ft.Colors.BLUE_600],
             ),
             width=page.window.width,
+            height=120,
         )
     ],
         width=page.window.width,
@@ -94,7 +95,7 @@ def main(page: ft.Page):
         scroll=ft.ScrollMode.ALWAYS,
     )
     story_text = ft.Text(
-        f"\n" * 20,
+        f"",
         size=16,
         font_family="cool_font"
     )
@@ -103,10 +104,11 @@ def main(page: ft.Page):
     story_container = ft.Column([
         ft.Container(
             story_text,
-            border_radius=7,
+            border_radius=10,
             gradient=ft.LinearGradient(
                 colors=[ft.Colors.BLUE_400, ft.Colors.BLUE_600],
             ),
+            height=200,
             width=page.window.width,
         )
     ],
