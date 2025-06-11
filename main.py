@@ -9,10 +9,11 @@ from numpy.random import *
 
 # lm studio setup
 try:
-    lmstudio.configure_default_client("memorylaptop.local:3333")
+    # connects to LM Server
+    lmstudio.configure_default_client("CHANGE TO YOUR SERVER IP")
     model = lmstudio.llm()
     chat = lmstudio.Chat("You're a Story maker that is to make cute little stories")
-except Exception:
+except:
     print("lmstudio not running")
 
 # character output structure
